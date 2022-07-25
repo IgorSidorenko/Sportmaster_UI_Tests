@@ -22,8 +22,10 @@ public class AddGoodsToBasketTest extends TestBaseWeb {
     @Description("Проверка на добавление товара в корзину и количество товара в корзине равное 1")
     @DisplayName("Добавить товар в пустую корзину через карточку товара")
     void addGoodsToEmptyBasketFromDetailPage() {
+        sleep(5000);
         step("Open 'https://www.sportmaster.ru'", () -> {
             open("/product/23117750299/");
+            Selenide.zoom(0.65);
         });
         step("Выбрать размер", () -> {
             $("[data-selenium='product-sizes-item']").click();
@@ -36,8 +38,9 @@ public class AddGoodsToBasketTest extends TestBaseWeb {
             $$("[data-selenium='basket-item']").shouldHave(CollectionCondition.size(1));
         });
     }
+}
 
-    @Test
+    /*@Test
     @Tag("UI")
     @Owner("Sidorenko")
     @Story("Добавить товар в корзину")
@@ -47,14 +50,16 @@ public class AddGoodsToBasketTest extends TestBaseWeb {
         step("Open 'https://www.sportmaster.ru'", () -> {
             open("/");
         });
-        step("Ввод текста 'Коньки' в поле поиска и нажать Enter", () -> {
-            $("[data-selenium='smTextField']").setValue("Коньки").pressEnter();
+        step("Ввод текста 'Кеды' в поле поиска и нажать Enter", () -> {
+            $("[data-selenium='smTextField']").setValue("Кеды").pressEnter();
         });
         step("Кликнуть на первый товара", () -> {
             $("[data-selenium='product-name']").scrollTo().hover();
             $("[data-selenium='addToCartButton']").click();
         });
         step("Выбрать размер", () -> {
+            sleep(2000);
+            Selenide.zoom(0.65);
             $("[data-selenium='product-sizes-item']").click();
             $("button[data-selenium='add-btn']").click();
         });
@@ -64,6 +69,5 @@ public class AddGoodsToBasketTest extends TestBaseWeb {
         });
         step("Кол-во товара в корзине = 1", () -> {
             $$("[data-selenium='basket-item']").shouldHave(CollectionCondition.size(1));
-        });
-    }
-}
+        });*/
+

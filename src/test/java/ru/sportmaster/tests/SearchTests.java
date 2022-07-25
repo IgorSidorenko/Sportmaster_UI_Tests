@@ -5,27 +5,22 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ru.sportmaster.pages.MainPage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class SearchTests extends TestBaseWeb {
-
+    MainPage mainPage = new MainPage();
     String searchWord = "рюкзаки";
 
     @Test
     @Tag("UI")
     @DisplayName("Поиск заданной категории товара в каталоге")
     public void goodsCategoryShouldBeFound() {
-        step("Открыть главную страницу", () -> open("/"));
-        step("Ввести в строку поиска " + searchWord, () ->
-                $("[placeholder=\"Поиск\"]")
-                        .setValue(searchWord)
-                        .pressEnter());
-        step("Проверить, что найдены товары по запросу " + searchWord, () ->
-                $("[data-selenium=\"category-title\"]")
-                        .should(Condition.text(searchWord))
-                        .should(Condition.visible));
+        mainPage.openMainPage()
+                .typeSearchWord(searchWord)
+                .checkGoodsFound(searchWord);
     }
 }

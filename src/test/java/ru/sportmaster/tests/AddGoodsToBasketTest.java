@@ -40,34 +40,3 @@ public class AddGoodsToBasketTest extends TestBaseWeb {
     }
 }
 
-    /*@Test
-    @Tag("UI")
-    @Owner("Sidorenko")
-    @Story("Добавить товар в корзину")
-    @Description("Проверка на добавление товара в корзину и количество товара в корзине равное 1")
-    @DisplayName("Добавить товар в пустую корзину через поиск")
-    void addGoodsToEmptyBasketFromSearchPage() {
-        step("Open 'https://www.sportmaster.ru'", () -> {
-            open("/");
-        });
-        step("Ввод текста 'Кеды' в поле поиска и нажать Enter", () -> {
-            $("[data-selenium='smTextField']").setValue("Кеды").pressEnter();
-        });
-        step("Кликнуть на первый товара", () -> {
-            $("[data-selenium='product-name']").scrollTo().hover();
-            $("[data-selenium='addToCartButton']").click();
-        });
-        step("Выбрать размер", () -> {
-            sleep(2000);
-            Selenide.zoom(0.65);
-            $("[data-selenium='product-sizes-item']").click();
-            $("button[data-selenium='add-btn']").click();
-        });
-
-        step("Кликнуть на 'Перейти в корзину'", () -> {
-            $("[data-selenium='sm_badge_item']").click();
-        });
-        step("Кол-во товара в корзине = 1", () -> {
-            $$("[data-selenium='basket-item']").shouldHave(CollectionCondition.size(1));
-        });*/
-

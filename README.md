@@ -84,20 +84,15 @@
 ### Главная страница Allure-отчета
 
 <p align="center">
-<img title="Allure Overview" src="images/screens/allure_overview.png">
+<img title="Allure Overview" src="images/screenshots/allure_overview.png">
 </p>
 
 ### Страница с тестами
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
+<img title="Allure Behaviors" src="images/screenshots/allure_behaviors.png">
 </p>
 
-### Основной дашборд
-
-<p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/allure_overview_dashboard.png">
-</p>
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
@@ -106,11 +101,6 @@
 <img title="Telegram Notifications" src="images/screenshots/telegram_notifications.png">
 </p>
 
-## <img width="4%" title="TestOps" src="images/logo/Allure_TO.svg"> Отчеты в TestOps
 
-<p align="center">
-<img title="Telegram Notifications" src="images/screens/testops.png">
-<img title="Telegram Notifications" src="images/screens/testops_launches.png">
-</p>
 
 

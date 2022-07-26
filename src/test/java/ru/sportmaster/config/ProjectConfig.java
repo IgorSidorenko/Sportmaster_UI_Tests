@@ -17,6 +17,6 @@ public interface ProjectConfig extends Config {
     String browser();
     @DefaultValue("100.0")
     String browserVersion();
-    @DefaultValue("1920x1080")
+    @DefaultValue("1440x900")
     String browserSize();
 }

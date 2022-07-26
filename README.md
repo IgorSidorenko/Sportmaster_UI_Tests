@@ -1,5 +1,7 @@
 # Проект автоматизации тестирования для Sportmaster
 
+<img src="images/screenshots/Sportmaster.png">
+
 ##  Используемые инструменты
 
 <p align="center">
@@ -36,7 +38,7 @@
 
 ### Локальный запуск тестов
 
-```./gradlew clean runTestsUi -Dclient=localBrowser -Dtype=ui```
+```./gradlew clean test```
 
 ### Локальный запуск тестов в Selenoid
 <details>
@@ -46,7 +48,7 @@
 >> * путь указать ```./src/test/resources/config/remoteBrowser.properties```
 >> * добавить данные в файл, пример( ```src/test/resources/config/exampleRemoteBrowser.properties``` )
 >2. Запустить тесты
->>```./gradlew clean runTestsUi -Dclient=remoteBrowser -Dtype=ui```
+>>```./gradlew clean test -DselenoidURL={}```
 </details>
 
 
@@ -63,10 +65,7 @@
 >3. Запустить тесты
 >>```
 >>clean
->>runTestsUi
->>-Dclient=remoteBrowser
->>-Dtype=ui
->>-Dthreads=3
+>>test
 >>```
 </details>
 </details>
@@ -114,8 +113,4 @@
 <img title="Telegram Notifications" src="images/screens/testops_launches.png">
 </p>
 
-./gradlew clean test -DselenoidURL={https://selenoid.autotests.cloud/}
-
-
-
-
+./gradlew clean test -DselenoidURL={}

@@ -114,7 +114,6 @@
 <img title="Telegram Notifications" src="images/screens/testops_launches.png">
 </p>
 
-./gradlew clean test -DselenoidURL={https://selenoid.autotests.cloud/}
 
 
 

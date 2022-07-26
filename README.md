@@ -32,7 +32,7 @@
 >
 > После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
 
-## Запуск UI web тестов
+## Запуск тестов
 <details>
 <summary>Подробнее ...</summary>
 
@@ -73,13 +73,13 @@
 
 
 # Пример запуска тестов Jenkins и отчеты
-## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Главная страница сборки [Jenkins](https://jenkins.autotests.cloud/job/Panin11HW-25Ui/)
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Главная страница сборки Jenkins
 
 <p align="center">
-  <img src="images/screens/jenkins.png">
+  <img src="images/screenshots/jenkins.png">
 </p>
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/Panin11HW-13-2/16/allure/)
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в Allure Report
 
 ### Главная страница Allure-отчета
 
@@ -103,7 +103,7 @@
 
 > После завершения сборки бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом.
 <p align="center">
-<img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
+<img title="Telegram Notifications" src="images/screenshots/telegram_notifications.png">
 </p>
 
 ## <img width="4%" title="TestOps" src="images/logo/Allure_TO.svg"> Отчеты в TestOps
@@ -113,4 +113,4 @@
 <img title="Telegram Notifications" src="images/screens/testops_launches.png">
 </p>
 
-./gradlew clean test -DselenoidURL={}
+

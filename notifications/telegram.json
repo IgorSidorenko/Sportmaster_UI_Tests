@@ -3,7 +3,7 @@
     "project": "qa_guru_web",
     "environment": "some env",
     "comment": "some comment",
-    "reportLink": "https://jenkins.autotests.cloud/job/sidorenko_qa_guru_mobile/",
+    "reportLink": "https://jenkins.autotests.cloud/job/sidorenko_qa_guru_web/",
     "language": "en",
     "messenger": "telegram",
     "allureFolder": "build/reports/allure-report/allureReport/",

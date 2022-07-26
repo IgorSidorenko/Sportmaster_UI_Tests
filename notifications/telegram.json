@@ -1,9 +1,9 @@
 {
   "base": {
-    "project": "some project",
+    "project": "qa_guru_web",
     "environment": "some env",
     "comment": "some comment",
-    "reportLink": "",
+    "reportLink": "https://jenkins.autotests.cloud/job/sidorenko_qa_guru_mobile/",
     "language": "en",
     "messenger": "telegram",
     "allureFolder": "build/reports/allure-report/allureReport/",

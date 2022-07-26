@@ -1,39 +1,59 @@
 package ru.sportmaster.tests;
 
-import com.codeborne.selenide.Selenide;
-import io.qameta.allure.junit5.AllureJunit5;
+import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import ru.sportmaster.config.ProjectConfig;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.extension.ExtendWith;
-import ru.sportmaster.config.Project;
-import ru.sportmaster.drivers.BrowserDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.sportmaster.helpers.AllureAttachments;
 
-import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static ru.sportmaster.helpers.DriverUtils.getSessionId;
+import java.util.Map;
 
-@ExtendWith({AllureJunit5.class})
-public class TestBaseWeb{
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
+
+public class TestBaseWeb {
+
+    static ProjectConfig config = ConfigFactory.create(ProjectConfig.class);
+    static String selenoidURL;
+
     @BeforeAll
-    public static void setup() {
-        BrowserDriver.configure();
-    }
+    static void setUp() {
 
-    public static void addAllureSelenide() {
-        addListener("AllureSelenide", new AllureSelenide());
+        String login = config.login();
+        String password = config.password();
+        String browser = config.browser();
+        String browserVersion = config.browserVersion();
+        String baseUrl = config.baseUrl();
+        String browserSize = config.browserSize();
+        selenoidURL = System.getProperty("selenoidURL");
+
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        Configuration.baseUrl = baseUrl;
+        Configuration.browserSize = browserSize;
+        if (selenoidURL != null) {
+            Configuration.remote = "https://" + login + ":" + password + "@" + selenoidURL;
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("browserName", browser);
+            capabilities.setCapability("browserVersion", browserVersion);
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
+        }
     }
 
     @AfterEach
-    public void afterEach() {
-        String sessionId = "";
-        if (Project.isRemoteWebDriver()) {
-            sessionId = getSessionId();
-        }
-        AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
-        if (Project.isVideoOn()) {
-            AllureAttachments.addVideoBrowser(sessionId);
-        }
+    void addAttachments() {
+        AllureAttachments.screenshotAs("Test screenshot");
+        AllureAttachments.pageSource();
+        AllureAttachments.browserConsoleLogs();
+        AllureAttachments.addVideo(selenoidURL);
+        closeWebDriver();
     }
 }

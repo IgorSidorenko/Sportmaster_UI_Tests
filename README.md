@@ -32,11 +32,10 @@
 
 ## Запуск UI web тестов
 <details>
-<summary>Подробнее ...</summary>
 
 ### Локальный запуск тестов
 
-```./gradlew clean runTestsUi -Dclient=localBrowser -Dtype=ui```
+```./gradlew clean test ``
 
 ### Локальный запуск тестов в Selenoid
 <details>

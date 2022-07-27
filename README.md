@@ -1,4 +1,4 @@
-# Проект автоматизации тестирования для Sportmaster.ru
+# Проект автоматизации тестирования для https://sportmaster.ru/
 
 <img src="images/screenshots/Sportmaster.png">
 

@@ -1,4 +1,4 @@
-# Проект автоматизации тестирования для Sportmaster.ru
+# Проект автоматизации тестирования для http://sportmaster.ru
 
 <img src="images/screenshots/Sportmaster.png">
 
@@ -12,7 +12,7 @@
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
-<img width="6%" title="TestOps" src="images/logo/Allure_TO.svg">
+<img width="6%" title="TestOps" src="images/logo/Allure-ee-logo.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
@@ -91,6 +91,13 @@
 
 <p align="center">
 <img title="Allure Behaviors" src="images/screenshots/allure_behaviors.png">
+</p>
+
+## <img width="4%" title="TestOps" src="images/logo/Allure-ee-logo.svg"> Отчеты в TestOps
+
+<p align="center">
+<img title="" src="images/screenshots/testops.png">
+<img title="" src="images/screenshots/testops_launches.png">
 </p>
 
 

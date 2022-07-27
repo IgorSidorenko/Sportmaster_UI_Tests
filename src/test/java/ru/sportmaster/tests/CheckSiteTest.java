@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckSiteTest extends TestBaseWeb {
 
-    /*@Test
+    @Test
     @AllureId("11716")
     @DisplayName("Page title should have header text")
     @Tag("UI")
@@ -36,7 +36,7 @@ public class CheckSiteTest extends TestBaseWeb {
 
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
-    }*/
+    }
 
     @Test
     @AllureId("11718")

@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckSiteTest extends TestBaseWeb {
 
-    @Test
+    /*@Test
     @Tag("UI")
     @Owner("Sidorenko")
     @Story("Smoke check page")
@@ -34,7 +34,7 @@ public class CheckSiteTest extends TestBaseWeb {
 
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
-    }
+    }*/
 
     @Test
     @Tag("UI")

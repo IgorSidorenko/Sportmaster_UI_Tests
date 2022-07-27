@@ -38,7 +38,7 @@ public class TestBaseWeb {
         if (selenoidURL != null) {
             Configuration.remote = "https://" + login + ":" + password + "@" + selenoidURL;
             DesiredCapabilities capabilities = new DesiredCapabilities();
-           capabilities.setCapability("browser", browser);
+            capabilities.setCapability("browser", browser);
             capabilities.setCapability("browserVersion", browserVersion);
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,

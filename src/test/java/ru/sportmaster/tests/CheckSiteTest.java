@@ -1,6 +1,7 @@
 package ru.sportmaster.tests;
 
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -18,11 +19,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CheckSiteTest extends TestBaseWeb {
 
     /*@Test
-    @Tag("UI")
-    @Owner("Sidorenko")
-    @Story("Smoke check page")
-    @Description("Проверка title сайта sportmaster")
+    @AllureId("11716")
     @DisplayName("Page title should have header text")
+    @Tag("UI")
+    @Story("Smoke check page")
+    @Owner("Sidorenko")
+    @Description("Проверка title сайта sportmaster")
     void titleTest() {
         Selenide.zoom (0.75);
         step("Open 'https://www.sportmaster.ru/'", () ->
@@ -37,11 +39,12 @@ public class CheckSiteTest extends TestBaseWeb {
     }*/
 
     @Test
-    @Tag("UI")
-    @Owner("Sidorenko")
-    @Story("Smoke check page")
-    @Description("Проверка на отсутствие ошибок в консоли сайта")
+    @AllureId("11718")
     @DisplayName("Page console log should not have errors")
+    @Tag("UI")
+    @Story("Smoke check page")
+    @Owner("Sidorenko")
+    @Description("Проверка на отсутствие ошибок в консоли сайта")
     void consoleShouldNotHaveErrorsTest() {
         step("Open 'https://www.sportmaster.ru/'", () ->
                 open("/"));

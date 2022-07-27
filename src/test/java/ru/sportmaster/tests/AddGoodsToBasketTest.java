@@ -2,6 +2,7 @@ package ru.sportmaster.tests;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -16,11 +17,12 @@ import static io.qameta.allure.Allure.step;
 public class AddGoodsToBasketTest extends TestBaseWeb {
 
     @Test
-    @Tag("UI")
-    @Owner("Sidorenko")
-    @Story("Добавить товар в корзину")
-    @Description("Проверка на добавление товара в корзину и количество товара в корзине равное 1")
+    @AllureId("11717")
     @DisplayName("Добавить товар в пустую корзину через карточку товара")
+    @Tag("UI")
+    @Story("Добавить товар в корзину")
+    @Owner("Sidorenko")
+    @Description("Проверка на добавление товара в корзину и количество товара в корзине равное 1")
     void addGoodsToEmptyBasketFromDetailPage() {
         sleep(5000);
         step("Open 'https://www.sportmaster.ru'", () -> {

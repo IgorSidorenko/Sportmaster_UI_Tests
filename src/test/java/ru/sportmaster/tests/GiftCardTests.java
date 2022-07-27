@@ -1,5 +1,6 @@
 package ru.sportmaster.tests;
 
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,8 +19,9 @@ public class GiftCardTests extends TestBaseWeb {
 
 
     @Test
-    @Tag("UI")
+    @AllureId("11714")
     @DisplayName("Заполнение формы подарочной карты")
+    @Tag("UI")
     public void userGoToPaymentPageAfterFillForm() {
         giftCardPage.openPage()
                 .addRecipientPhoneNumber(recipientPhone)

@@ -48,7 +48,7 @@
 >> * путь указать ```./src/test/resources/config/remoteBrowser.properties```
 >> * добавить данные в файл, пример( ```src/test/resources/config/exampleRemoteBrowser.properties``` )
 >2. Запустить тесты
->>```./gradlew clean test -DselenoidURL={}```
+>>```./gradlew clean test -DselenoidURL=${SELENOIDURL}```
 </details>
 
 
@@ -66,6 +66,7 @@
 >>```
 >>clean
 >>test
+>>-DselenoidURL=${SELENOIDURL}
 >>```
 </details>
 </details>

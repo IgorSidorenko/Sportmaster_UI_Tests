@@ -26,7 +26,7 @@ public class CheckSiteTest extends TestBaseWeb {
     @Owner("Sidorenko")
     @Description("Проверка title сайта sportmaster")
     void titleTest() {
-        Selenide.zoom (0.75);
+        Selenide.zoom(0.75);
         step("Open 'https://www.sportmaster.ru/'", () ->
                 open("/"));
 

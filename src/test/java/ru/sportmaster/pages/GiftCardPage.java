@@ -2,9 +2,12 @@ package ru.sportmaster.pages;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
+import org.assertj.core.error.ShouldHave;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GiftCardPage {
 
@@ -65,6 +68,6 @@ public class GiftCardPage {
     @Step("Проверить, что открылась страница оплаты")
     public void checkPaymentPage() {
         String url = WebDriverRunner.getWebDriver().getCurrentUrl();
-        url.contains("securepayments.sberbank.ru");
+        $("[data-test-id=\"box-title\"]").shouldHave(text("SberPay"));
     }
 }

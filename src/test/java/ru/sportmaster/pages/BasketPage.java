@@ -12,13 +12,13 @@ public class BasketPage {
     private SelenideElement deleteAll = $("[data-selenium='cart-group-delete']");
     private ElementsCollection itemGoods = $$("[data-selenium='basket-item']");
 
-    @Step("delete goods all")
+    @Step("Delete all items")
     public BasketPage deleteGoods() {
         deleteAll.click();
         return this;
     }
 
-    @Step("delete goods all")
+    @Step("Check delete all items")
     public BasketPage checkItems(int count) {
         itemGoods.shouldHave(size(count));
         return this;

@@ -8,7 +8,6 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.sportmaster.pages.GetConsoleLogs;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
@@ -52,7 +51,6 @@ public class CheckSiteTest extends TestBaseWeb {
         step("Console logs should not contain text '500'", () -> {
             String consoleLogs = GetConsoleLogs.getConsoleLogs();
             String errorText = "500";
-
             assertThat(consoleLogs).doesNotContain(errorText);
         });
     }

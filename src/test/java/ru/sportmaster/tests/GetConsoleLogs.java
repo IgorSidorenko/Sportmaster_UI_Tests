@@ -1,4 +1,4 @@
-package ru.sportmaster.pages;
+package ru.sportmaster.tests;
 
 import com.codeborne.selenide.Selenide;
 
